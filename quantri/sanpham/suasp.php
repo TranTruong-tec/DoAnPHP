@@ -25,9 +25,10 @@
 		$tinhtrang = $_POST['TinhTrang'];
 		$mota = $_POST['MoTa'];
 		$khuyenmai = $_POST['KhuyenMai'];
-		if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai)){
+		$sanphamhot = $_POST['SanPhamHot'];
+		if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai)&& isset($sanphamhot)){
 			move_uploaded_file($tmp_name,$path.$hinhanh);
-			$sqlsp = "UPDATE sanpham SET IDLoai = '$IDLoai', TenSP = '$tenSp', HinhAnh = '$hinhanh' , Gia = '$gia' , TinhTrang = '$tinhtrang', MoTa = '$mota', KhuyenMai = '$khuyenmai' WHERE IDSp = $IDSp";
+			$sqlsp = "UPDATE sanpham SET IDLoai = '$IDLoai', TenSP = '$tenSp', HinhAnh = '$hinhanh' , Gia = '$gia' , TinhTrang = '$tinhtrang', MoTa = '$mota', KhuyenMai = '$khuyenmai', SanPhamHot = '$sanphamhot' WHERE IDSp = $IDSp";
 			$querysp = mysqli_query($conn,$sqlsp);
 			header('location:index.php?page=sanpham');
 		}
@@ -101,6 +102,11 @@
 										?>
 											
 					                    </select>
+									</div>
+									<div class="form-group" >
+										<label>Sản phẩm nổi bật</label><br> 
+										 <input type="radio" name="SanPhamHot" <?php if ($row['SanPhamHot']== 1) {echo 'checked';}  ?> value="1">Có</br>
+										 <input type="radio" checked name="SanPhamHot" <?php if ($row['SanPhamHot']== 0) {echo 'checked';}  ?> value="0">Không
 									</div>
 									
 									<input type="submit" name="submit" value="Sửa" class="btn btn-primary">

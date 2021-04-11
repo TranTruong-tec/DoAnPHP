@@ -25,11 +25,12 @@ if(isset($_POST['submit'])){
 	$tinhtrang = $_POST['TinhTrang'];
 	$mota = $_POST['MoTa'];
 	$khuyenmai = $_POST['KhuyenMai'];
+	$sanphamhot = $_POST['SanPhamHot'];
 	
 	
-	if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai)){
+	if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai) && isset($sanphamhot)){
 		move_uploaded_file($tmp_name,$path.$hinhanh);
-		$sql = "INSERT INTO sanpham(IDLoai,TenSP,HinhAnh,Gia,TinhTrang,MoTa,KhuyenMai) VALUES ('$IDLoai','$tenSp','$hinhanh','$gia','$tinhtrang','$mota','$khuyenmai')";
+		$sql = "INSERT INTO sanpham(IDLoai,TenSP,HinhAnh,Gia,TinhTrang,MoTa,KhuyenMai,SanPhamHot) VALUES ('$IDLoai','$tenSp','$hinhanh','$gia','$tinhtrang','$mota','$khuyenmai','$sanphamhot')";
 		$query = mysqli_query($conn,$sql);
 		header('location:index.php?page=sanpham');
 	}
@@ -101,6 +102,11 @@ if(isset($_POST['submit'])){
 										?>
 											
 					                    </select>
+									</div>
+									<div class="form-group" >
+										<label>Sản phẩm nổi bật</label></br>
+										 <input type="radio" name="SanPhamHot" value="1">Có</br>
+										 <input type="radio" checked name="SanPhamHot" value="0">Không
 									</div>
 									
 									<input type="submit" name="submit" value="Thêm" class="btn btn-primary">

@@ -59,6 +59,7 @@ for ($i=1; $i < $totalPage; $i++) { // vòng lặp for hiển thị trang 1 2 3
 											<th>Khuyến Mãi</th>
 											<th>Trình Trạng</th>
 											<th>Mô Tả</th>
+											<th>Sản Phẩm Hot</th>
 											<th>Tùy chọn</th>
 											
 										</tr>
@@ -83,9 +84,14 @@ for ($i=1; $i < $totalPage; $i++) { // vòng lặp for hiển thị trang 1 2 3
 											<td><?php  echo $row['KhuyenMai'];   ?></td>
 											<td><?php  echo $row['TinhTrang'];   ?></td>
 											<td><?php  echo $row['MoTa'];   ?></td>
+											<td><?php  if($row['SanPhamHot'] == 1){
+												echo 'Có'; 
+											}else {
+												echo 'Không';
+											} ;   ?></td>
 											<td>
 											<a href="index.php?page=suasp&IDSp=<?php echo $row['IDSp']?>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Sửa</a>
-												<a href="xoasp.php?IDSp=<?php echo $row['IDSp']?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa</a>
+											<a href="xoasp.php?IDSp=<?php echo $row['IDSp']?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa</a>
 											</td>
 											
 										</tr>
