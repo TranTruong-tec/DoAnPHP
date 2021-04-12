@@ -55,14 +55,14 @@
 		$sql = "DELETE FROM $table WHERE $cond LIMIT $limit";
 		return $this->exec($sql);
 	}
-	public function affectedRows($sql,$username,$password){
+	public function affectedRows($sql,$email,$matkhau){
 		$statement = $this->prepare($sql);
-		$statement->execute(array($username,$password));
+		$statement->execute(array($email,$matkhau));
 		return $statement->rowCount();
 	}
-	public function selectUser($sql,$username,$password){
+	public function selectUser($sql,$email,$matkhau){
 		$statement = $this->prepare($sql);
-		$statement->execute(array($username,$password));
+		$statement->execute(array($email,$matkhau));
 		return $statement->fetchAll(PDO::FETCH_ASSOC);
 	}
      

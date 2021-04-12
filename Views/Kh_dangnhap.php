@@ -97,7 +97,7 @@
                            <div class="row">
                               <div class="input">
                                  <label>Email: <span style="color:red;">*</span></label>
-                                 <input type="text" name="username" required class="clsip">
+                                 <input type="text" name="Email" required class="clsip">
                               </div>
                               <div class="clear"></div>
                            </div>
@@ -105,7 +105,7 @@
                            <div class="row">
                            <div class="input">
                                  <label>Mật Khẩu: <span style="color:red;">*</span></label>
-                                 <input type="password" name="password" required class="clsip">
+                                 <input type="password" name="MatKhau" required class="clsip">
                               </div>
                               <div class="clear"></div>
                            </div>

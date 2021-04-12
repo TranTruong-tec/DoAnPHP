@@ -49,7 +49,7 @@
                                     </a>
                                 </div>
                                 <div >
-                                     <input type="submit" style="box-shadow: none" class="btn btn-success btn-sm" name="addcart" value="Đặt hàng">   
+                                     <input type="submit" style="box-shadow: none" class="btn btn-success btn-sm" name="addcart" value="Thêm vào giỏ hàng">   
                                 </div>
                                 <!-- <div>
                                 
