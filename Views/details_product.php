@@ -60,12 +60,12 @@ foreach($chitietsanpham as $key => $value){
                            <div class="content-des-pro_in">
                               <div class="pro-des-sum">
                                  <div class="price">
-                                    <!-- <p class="code_skin" style="margin-bottom:10px">
+                                    <p class="code_skin" style="margin-bottom:10px">
                                        <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a href="">Comrack</a></span>
-                                    </p> -->
-                                    <!-- <div class="status_pro">
+                                    </p>
+                                    <div class="status_pro">
                                        <span><b>Trạng thái:</b>  Còn hàng</span>
-                                    </div> -->
+                                    </div>
                                    
                                  </div>
                                  <div class="color_price">
@@ -96,9 +96,9 @@ foreach($chitietsanpham as $key => $value){
                                  <a onclick="return giohang(579);" class="view_duan">
                                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
                                  </a>
-                                 <!-- <a href="tel:090 66 99 038" class="view_duan">
+                                 <a href="tel:090 66 99 038" class="view_duan">
                                  <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                                 </a> -->
+                                 </a>
                                  <div class="clear"></div>
                               </div>
                               <div class="clear"></div>
@@ -232,12 +232,13 @@ foreach($chitietsanpham as $key => $value){
 
                         
                         ?>
+                        
                         <div class="grids">
                        <div class="grids_in">
                         <div class="content">
                         <div class="img-right-pro">
                           
-                           <a href="sanpham.php">
+                           <a href="<?php echo BASE_URL ?>/sanpham/chitietsanpham/<?php echo $product['IDSp'] ?>">
                            <img class="lazy img-pro content-image" src="<?php echo BASE_URL?>/quantri/images/<?php echo $splq['HinhAnh']?>" data-original="image/Air_Jordan_1_Mid.jpg" alt="Shoes" />
                            </a>
                            </div>
@@ -247,14 +248,10 @@ foreach($chitietsanpham as $key => $value){
                               <h3><?php echo $splq['TenSP']?></h3>
                            </a>
                         </div>
-                        <div class="add_card">
-                           <a onclick="return giohang(579);">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                           </a>
-                        </div>
+   
                         <div class="price_old_new">
                            <div class="price">
-                              <span class="news_price"><?php echo number_format($chitiet['Gia'],0,',','.').'đ'  ?></span>
+                              <span class="news_price"><?php echo number_format($splq['Gia'],0,',','.').'đ'  ?></span>
                            </div>
                         </div>
                      </div>

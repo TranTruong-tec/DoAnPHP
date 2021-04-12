@@ -44,12 +44,13 @@
                 foreach($category_by_id as $key => $product){
                 ?>
                 
+                
                     <div class="grids">
                         <div class="grids_in">
                             <div class="content">
                                 <div class="img-right-pro">
 
-                                    <a href="sanpham.php">
+                                    <a href="<?php echo BASE_URL ?>/sanpham/chitietsanpham/<?php echo $product['IDSp'] ?>">
                                         <img class="lazy img-pro content-image" src="<?php echo BASE_URL?>/quantri/images/<?php echo $product['HinhAnh']?>" 
                                         data-original="image/1.jpg" alt="SHOES" />
                                     </a>
@@ -61,11 +62,7 @@
                                         <h3><?php echo $product['TenSP'] ?></h3>
                                     </a>
                                 </div>
-                                <div class="add_card">
-                                    <a onclick="return giohang(579);">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                                    </a>
-                                </div>
+                                
                                 <div class="price_old_new">
                                     <div class="price">
                                         <span class="news_price"><?php echo number_format($product['Gia'],0,',','.').'đ'?></span>

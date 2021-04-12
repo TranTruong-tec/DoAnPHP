@@ -55,7 +55,7 @@
                                <?php
                                     $total = 0;
                                     foreach($_SESSION['shopping_cart'] as $key => $value){
-                                    $subtotal = $value['SoLuong']* $value['Gia'];
+                                    $subtotal = $value['SoLuong']*$value['Gia'];
                                     $total+=$subtotal; 
                                  ?>
                               <tr class="tr">

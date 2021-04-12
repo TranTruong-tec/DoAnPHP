@@ -45,9 +45,16 @@
                foreach ($list_product as $key => $product) {
                ?>
                   <div class="grids grids-list-product">
+                  <form action="<?php echo BASE_URL ?>/giohang/themgiohang" method="POST">
+                  <input type="hidden" value="<?php echo $product['IDSp'] ?>" name="IDSp">
+                  <input type="hidden" value="<?php echo $product['TenSP'] ?>" name="TenSP">
+                  <input type="hidden" value="<?php echo $product['HinhAnh'] ?>" name="HinhAnh">
+                  <input type="hidden" value="<?php echo $product['Gia'] ?>" name="Gia">
+                  <input type="hidden" value="1" name="SoLuong">
                      <div class="grids_in">
                         <div class="content">
                            <div class="img-right-pro">
+
 
                               <a href="<?php echo BASE_URL ?>/sanpham/chitietsanpham/<?php echo $product['IDSp'] ?>">
                                  <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/quantri/images/<?php echo $product['HinhAnh'] ?>" data-original="image/1.jpg" alt="SHOES" />
@@ -60,10 +67,8 @@
                                  <h3><?php echo $product['TenSP'] ?></h3>
                               </a>
                            </div>
-                           <div class="add_card">
-                              <a onclick="return giohang(579);">
-                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                              </a>
+                           <div>
+                              <input type="submit" style="box-shadow: none" class="btn btn-success btn-sm" name="addcart" value="Thêm vào giỏ hàng">
                            </div>
                            <div class="price_old_new">
                               <div class="price">

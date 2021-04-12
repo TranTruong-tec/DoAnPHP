@@ -105,55 +105,7 @@
                                                     <li class='active has-sub'>
 
                                                         <a href='<?php echo BASE_URL ?>/sanpham/danhmuc/<?php echo $cate['IDLoai'] ?>'>
-                                                            <span><?php echo $cate['TenLoai'] ?></span></a>
-                                                        <!--<div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="<?php echo BASE_URL ?>/index/danhmuc">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-
-                                                    </div>-->
-
+                                                            <span><?php echo $cate['TenLoai'] ?></span></a>                                           
                                                     </li>
                                                 <?php
                                                 }

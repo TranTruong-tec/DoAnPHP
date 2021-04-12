@@ -98,13 +98,13 @@
             <h4 class="tkw9999">&copy;  © Bản quyền thuộc về Webextrasite. Designed by <a href="http://webextrasite.com/" rel="dofollow" target="_blank">Thiet Ke Web</a> Bởi <a href="http://webextrasite.com/">Webextrasite.com</a></h4>
          </div>
       </footer>
-      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon" >
+      <!-- <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon" >
          <a href="tel:090909090" title="Gọi ngay cho chúng tôi">
             <div class="coccoc-alo-ph-circle"></div>
             <div class="coccoc-alo-ph-circle-fill"></div>
             <div class="coccoc-alo-ph-img-circle"></div>
          </a>
-      </div>
+      </div> -->
        <link async rel="stylesheet" href="<?php echo BASE_URL?>/public/css/cssfooter.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       

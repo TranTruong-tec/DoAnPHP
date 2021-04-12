@@ -55,6 +55,36 @@ class giohang extends DBControllers{
 			}
 			header("Location:".BASE_URL.'/giohang/giohang');
 		}
+		public function updategiohang(){
+			Session::init();
+			if(isset($_POST['delete_cart'])){
+				if(isset($_SESSION["shopping_cart"])){
+				foreach($_SESSION["shopping_cart"] as $key => $values){
+
+					if($_SESSION["shopping_cart"][$key]['IDSp'] == $_POST['delete_cart']){
+						unset($_SESSION["shopping_cart"][$key]);
+					}	
+				}
+				header('Location:'.BASE_URL.'/giohang/giohang');
+				}else{
+				header('Location:'.BASE_URL);
+				}
+			}else{
+				foreach($_POST['qty'] as $key => $qty){
+					foreach($_SESSION["shopping_cart"] as $session => $values){
+						if($values['IDSp'] == $key && $qty >= 1){
+							$_SESSION["shopping_cart"][$session]['SoLuong'] = $qty;
+						}elseif($values['IDSp'] == $key && $qty <= 0){
+							unset($_SESSION["shopping_cart"][$session]);
+						}
+					}
+				}
+				header('Location:'.BASE_URL.'/giohang/giohang');
+				
+			}
+			
+			
+		}
 }
     
 
