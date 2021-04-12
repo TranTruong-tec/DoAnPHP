@@ -2,7 +2,7 @@
  $dbhost="localhost";
  $dbUser="root";
  $dbPass="";
- $dbName="pdo_shopgiay";
+ $dbName="shopbangiay";
  $conn=mysqli_connect($dbhost,$dbUser,$dbPass,$dbName);
  if($conn){
      $setlang=mysqli_query($conn, "SET NAMES 'utf8'");

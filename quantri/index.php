@@ -48,7 +48,9 @@ if (!isset($_SESSION['Email'])) {
 			<li class="active"><a href="index.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Trang chủ</a></li>
 			<li><a href="index.php?page=sanpham"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg> Quản lý sản phẩm</a></li>
 			<li><a href="index.php?page=theloai"><svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg> Quản lý thể loại</a></li>
-			<li><a href="index.php?page=user"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Quản lý người dùng</a></li>
+			<li><a href="index.php?page=user"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Quản lý admin</a></li>
+			<li><a href="index.php?page=khachhang"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Quản lý khách hàng</a></li>
+			<li><a href="index.php?page=donhang"><svg class="glyph stroked open letter"><use xlink:href="#stroked-open-letter"></use></svg> Quản lý đơn hàng</a></li>
 			<li role="presentation" class="divider"></li>
 		</ul>
 		
@@ -83,6 +85,18 @@ if (!isset($_SESSION['Email'])) {
 					# code...
 					break;
 				case 'edituser': include_once './nguoidung/edit.php';
+					# code...
+					break;
+				case 'donhang': include_once './donhang/donhang.php';
+					# code...
+					break;
+				case 'CTHD': include_once './donhang/CTHD.php';
+					# code...
+					break;
+				case 'khachhang': include_once './nguoidung/khachhang.php';
+					# code...
+					break;
+				case 'editKH': include_once './nguoidung/editKH.php';
 					# code...
 					break;
 				

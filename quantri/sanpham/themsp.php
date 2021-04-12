@@ -22,15 +22,15 @@ if(isset($_POST['submit'])){
 		
 	}
 	$gia = $_POST['Gia'];
-	$tinhtrang = $_POST['TinhTrang'];
+	// $tinhtrang = $_POST['TinhTrang'];
 	$mota = $_POST['MoTa'];
 	$khuyenmai = $_POST['KhuyenMai'];
 	$sanphamhot = $_POST['SanPhamHot'];
 	
 	
-	if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai) && isset($sanphamhot)){
+	if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($mota)&& isset($khuyenmai) && isset($sanphamhot)){
 		move_uploaded_file($tmp_name,$path.$hinhanh);
-		$sql = "INSERT INTO sanpham(IDLoai,TenSP,HinhAnh,Gia,TinhTrang,MoTa,KhuyenMai,SanPhamHot) VALUES ('$IDLoai','$tenSp','$hinhanh','$gia','$tinhtrang','$mota','$khuyenmai','$sanphamhot')";
+		$sql = "INSERT INTO sanpham(IDLoai,TenSP,HinhAnh,Gia,MoTa,KhuyenMai,SanPhamHot) VALUES ('$IDLoai','$tenSp','$hinhanh','$gia','$mota','$khuyenmai','$sanphamhot')";
 		$query = mysqli_query($conn,$sql);
 		header('location:index.php?page=sanpham');
 	}
@@ -76,10 +76,10 @@ if(isset($_POST['submit'])){
 										<label>Khuyến mãi</label>
 										<input required type="text" name="KhuyenMai" class="form-control">
 									</div>
-									<div class="form-group" >
+									<!-- <div class="form-group" >
 										<label>Tình trạng</label>
 										<input required type="text" name="TinhTrang" class="form-control">
-									</div>
+									</div> -->
 									
 									<div class="form-group" >
 										<label>Mô tả</label>

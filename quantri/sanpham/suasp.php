@@ -22,13 +22,13 @@
 			
 		}
 		$gia = $_POST['Gia'];
-		$tinhtrang = $_POST['TinhTrang'];
+		// $tinhtrang = $_POST['TinhTrang'];
 		$mota = $_POST['MoTa'];
 		$khuyenmai = $_POST['KhuyenMai'];
 		$sanphamhot = $_POST['SanPhamHot'];
-		if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($tinhtrang)&& isset($mota)&& isset($khuyenmai)&& isset($sanphamhot)){
+		if(isset($IDLoai) && isset($tenSp) && isset($hinhanh)&& isset($gia)&& isset($mota)&& isset($khuyenmai)&& isset($sanphamhot)){
 			move_uploaded_file($tmp_name,$path.$hinhanh);
-			$sqlsp = "UPDATE sanpham SET IDLoai = '$IDLoai', TenSP = '$tenSp', HinhAnh = '$hinhanh' , Gia = '$gia' , TinhTrang = '$tinhtrang', MoTa = '$mota', KhuyenMai = '$khuyenmai', SanPhamHot = '$sanphamhot' WHERE IDSp = $IDSp";
+			$sqlsp = "UPDATE sanpham SET IDLoai = '$IDLoai', TenSP = '$tenSp', HinhAnh = '$hinhanh' , Gia = '$gia' , MoTa = '$mota', KhuyenMai = '$khuyenmai', SanPhamHot = '$sanphamhot' WHERE IDSp = $IDSp";
 			$querysp = mysqli_query($conn,$sqlsp);
 			header('location:index.php?page=sanpham');
 		}
@@ -68,10 +68,10 @@
 										<label>Khuyến mãi</label>
 										<input required type="text" name="KhuyenMai" class="form-control" value = "<?php if(isset($_POST['KhuyenMai'])){echo $_POST['KhuyenMai'];} else{echo $row['KhuyenMai'];}  ?>">
 									</div>
-									<div class="form-group" >
+									<!-- <div class="form-group" >
 										<label>Tình trạng</label>
 										<input required type="text" name="TinhTrang" class="form-control" value = "<?php if(isset($_POST['TinhTrang'])){echo $_POST['TinhTrang'];} else{echo $row['TinhTrang'];}  ?>">
-									</div>							
+									</div>							 -->
 									<div class="form-group" >
 										<label>Mô tả</label>
 										<!-- <textarea required ="" class="form-control" row ="3" name="MoTa" value = "<?php if(isset($_POST['MoTa'])){echo $_POST['MoTa'];}  else{echo $row['MoTa'];} ?>"></textarea> -->

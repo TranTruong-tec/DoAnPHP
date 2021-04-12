@@ -1,9 +1,11 @@
 <?php
 include_once './db_config.php';
+
  $sql = "SELECT * FROM sanpham INNER JOIN theloai ON sanpham.IDLoai = theloai.IDLoai  ORDER BY IDSp DESC ";
  $query = mysqli_query($conn,$sql);
 
 ?>
+
 <?php
 
 if (isset($_GET['trang'])) {// kiểm tra tồn tại của get['trang]
@@ -57,7 +59,7 @@ for ($i=1; $i < $totalPage; $i++) { // vòng lặp for hiển thị trang 1 2 3
 											<th width="20%">Ảnh sản phẩm</th>
 											<th>Loại Sản Phẩm</th>
 											<th>Khuyến Mãi</th>
-											<th>Trình Trạng</th>
+											<!-- <th>Trình Trạng</th> -->
 											<th>Mô Tả</th>
 											<th>Sản Phẩm Hot</th>
 											<th>Tùy chọn</th>
@@ -76,13 +78,13 @@ for ($i=1; $i < $totalPage; $i++) { // vòng lặp for hiển thị trang 1 2 3
 											
 											<td><?php  echo $i1;   ?></td>
 											<td><?php  echo $row['TenSP'];   ?></td>
-											<td><?php  echo $row['Gia'];   ?></td>
+											<td><?php  echo number_format($row['Gia'],0,',','.').'đ'   ?></td>
 											<td>
 												<img width="150px" src="images/<?php  echo $row['HinhAnh'];   ?>" class="thumbnail">
 											</td>
 											<td><?php  echo $row['TenLoai'];   ?></td>
 											<td><?php  echo $row['KhuyenMai'];   ?></td>
-											<td><?php  echo $row['TinhTrang'];   ?></td>
+											<!-- <td><?php  echo $row['TinhTrang'];   ?></td> -->
 											<td><?php  echo $row['MoTa'];   ?></td>
 											<td><?php  if($row['SanPhamHot'] == 1){
 												echo 'Có'; 
