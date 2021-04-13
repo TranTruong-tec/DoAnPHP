@@ -41,7 +41,7 @@ foreach($chitietsanpham as $key => $value){
                            <h1><?php echo $TenSp ?></h1>
                         </div>
                         <div class="slider-galery ">
-                         <div id="sync1" class="owl-carousel owl-theme">
+                         <!-- <div id="sync1" class="owl-carousel owl-theme"> -->
                                   <div class="item">
                                       <img src="<?php echo BASE_URL?>/quantri/images/<?php echo $chitiet['HinhAnh']?>" width="100%">
                                   </div>
@@ -60,12 +60,12 @@ foreach($chitietsanpham as $key => $value){
                            <div class="content-des-pro_in">
                               <div class="pro-des-sum">
                                  <div class="price">
-                                    <p class="code_skin" style="margin-bottom:10px">
+                                    <!-- <p class="code_skin" style="margin-bottom:10px">
                                        <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a href="">Comrack</a></span>
-                                    </p>
-                                    <div class="status_pro">
+                                    </p> -->
+                                    <!-- <div class="status_pro">
                                        <span><b>Trạng thái:</b>  Còn hàng</span>
-                                    </div>
+                                    </div> -->
                                    
                                  </div>
                                  <div class="color_price">

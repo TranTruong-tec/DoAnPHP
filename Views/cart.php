@@ -126,7 +126,7 @@
                         </tfoot>
                      </table>
                   </div>
-                  <div class="contact_form">
+                  <!-- <div class="contact_form">
                      <div class="contact_left">
                         <div class="ch-contacts-details">
                            <ul class="contact-list">
@@ -149,66 +149,8 @@
                            </div>
                         </div>
                      </div>
-                     <div class="contact_right">
-                        <div class="form_contact_in">
-                           <div class="box_contact">
-                              <form name="FormDatHang" method="POST" autocomplete="off" action="<?php echo BASE_URL ?>/giohang/dathang">
-                                 <div class="content-box_contact">
-                                    <div class="row">
-                                       <div class="input">
-                                          <label>Họ và tên: <span style="color:red;">*</span></label>
-                                          <input type="text" name="name" required class="clsip">
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="row">
-                                       <div class="input">
-                                          <label>Số điện thoại: <span style="color:red;">*</span></label>
-                                          <input type="text" name="sodienthoai" required onkeydown="return checkIt(event)" class="clsip">
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="row">
-                                       <div class="input">
-                                          <label>Địa chỉ: <span style="color:red;">*</span></label>
-                                          <input type="text" name="diachi" required class="clsip" >
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="row">
-                                       <div class="input">
-                                          <label>Email: <span style="color:red;">*</span></label>
-                                          <input type="text" name="email" onchange="return KiemTraEmail(this);" required class="clsip">
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="row">
-                                       <div class="input">
-                                          <label>Nội dung: <span style="color:red;">*</span></label>
-                                          <textarea type="text" name="noidung" class="clsipa"></textarea>
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="row btnclass">
-                                       <div class="input ipmaxn ">
-                                          <input type="submit" class="btn-gui" name="frmSubmit" id="frmSubmit" value="Gửi đơn hàng">
-                                          <input type="reset" class="btn-gui" value="Nhập lại">
-                                       </div>
-                                       <div class="clear"></div>
-                                    </div>
-                                    <!---row---->
-                                    <div class="clear"></div>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                     
+                  </div> -->
                </div>
             </div>
          </div>
